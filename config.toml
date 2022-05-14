@@ -1,0 +1,221 @@
+######################## default configuration ####################
+baseURL = "/"
+title = "welcome to revetive site"
+theme = "revetive"
+# post pagination
+paginate = "6"
+# post excerpt
+summaryLength = "10"
+# google analytics
+googleAnalytics = "" # example : UA-123-45
+# disqus short name
+disqusShortname = "#" # get your shortname form here : https://disqus.com
+
+############################# Outputs ##############################
+[outputs]
+home = ["HTML", "RSS"]
+
+[markup.goldmark.renderer]
+unsafe= true
+
+############################# Plugins ##############################
+
+# CSS Plugins
+[[params.plugins.css]]
+link = "plugins/bootstrap/bootstrap.css" 
+[[params.plugins.css]]
+link = "plugins/maicons/maicons.css" 
+[[params.plugins.css]]
+link = "plugins/animate/animate.css"
+[[params.plugins.css]]
+link = "plugins/owl/owl.carousel.css"
+[[params.plugins.css]]
+link = "plugins/jquery/jquery.fancybox.css"
+[[params.plugins.css]]
+link = "plugins/theme/theme.css"
+
+# JS Plugins
+[[params.plugins.js]]
+link = "plugins/jquery/jquery-3.5.1.min.js"
+[[params.plugins.js]]
+link = "plugins/bootstrap/bootstrap.bundle.min.js"
+[[params.plugins.js]]
+link = "plugins/owl/owl.carousel.min.js"
+[[params.plugins.js]]
+link = "plugins/wow/wow.min.js"
+[[params.plugins.js]]
+link = "plugins/jquery/jquery.fancybox.min.js"
+[[params.plugins.js]]
+link = "plugins/isotope/isotope.pkgd.min.js"
+[[params.plugins.js]]
+link = "plugins/google-maps/google-maps.js"
+[[params.plugins.js]]
+link = "plugins/theme/theme.js"
+[[params.plugins.js]]
+link = "plugins/googleapis.js"
+
+############################## English navigation ###############################
+[menu]
+  # [[Languages.en.menu.main]]
+  # name = "Home"
+  # URL = "/"
+  # weight = 1
+
+  [[Languages.en.menu.main]]
+  name = "About"
+  URL = "/about"
+  weight = 2
+
+  [[Languages.en.menu.main]]
+  name = "Services"
+  URL = "/services"
+  weight = 3
+
+  [[Languages.en.menu.main]]
+  name = "Projects"
+  URL = "/projects"
+  weight = 4
+
+  [[Languages.en.menu.main]]
+  name = "Blogs"
+  URL = "/blogs"
+  weight = 5
+
+  [[Languages.en.menu.main]]
+  name = "Contact"
+  URL = "/contact"
+  weight = 6
+
+#################### default parameters ################################
+[params]
+logo = "ReveTive"
+home = "Home"
+
+# [[params.footer_menu]]
+# name = "Career"
+# link = "career"
+
+# [[params.footer_menu]]
+# name = "Resources"
+# link = "resources"
+
+# [[params.footer_menu]]
+# name = "News & Feed"
+# link = "news"
+
+# Meta data
+description = "This is meta description"
+author = "revetive"
+# copyright
+copyright = 'Copyright 2020. This template designed by <a href="https://macodeid.com">MACode ID'
+designdevelop = "Designed & Developed by : [infopercept](https://infopercept.com/)"
+address = "301 The Greenhouse, Custard Factory, London, E2 8DY."
+phone1 = "Phone: +00 112323980"
+phone2 = " +0011223495"
+sms = ""
+Whatsapp = ""
+header_email = ""
+email = "Email: example@mail.com"
+footer_title = "ReveTive."
+logotext = "ReveTive"
+################################### English language #####################################
+[Languages.en]
+languageName = "En"
+languageCode = "en-us"
+contentDir = "content/english"
+weight = 1
+# copyright
+copyright = "Copyright 2020. This template designed by MACode ID"
+browserviews = "This website is best viewed on IE 11+, Mozilla Firefox, Google"
+
+############################## English navigation ###############################
+[footer_menu]
+  [[Languages.en.footer_menu.main]]
+  name = "Career"
+  URL = "/"
+  weight = 1
+
+  [[Languages.en.footer_menu.main]]
+  name = "Resources"
+  URL = "/resources"
+  weight = 2
+
+  [[Languages.en.footer_menu.main]]
+  name = "News & Feed"
+  URL = "/news"
+  weight = 3
+
+
+################################### Deployment Script #####################################
+
+[deployment]
+# By default, files are uploaded in an arbitrary order.
+# Files that match the regular expressions in the "Order" list
+# will be uploaded first, in the listed order.
+order = [".jpg$", ".gif$"]
+
+# [[deployment.targets]]
+# An arbitrary name for this target.
+# name = "awsdeploy"
+# The Go Cloud Development Kit URL to deploy to. Examples:
+# GCS; see https://gocloud.dev/howto/blob/#gcs
+# URL = "gs://<Bucket Name>"
+
+#[[deployment.targets]]
+# An arbitrary name for this target.
+# name = "awsdeploy"
+# S3; see https://gocloud.dev/howto/blob/#s3
+# For S3-compatible endpoints, see https://gocloud.dev/howto/blob/#s3-compatible
+# URL = "s3://<Bucket Name>?region=<AWS region>"
+
+# Azure Blob Storage; see https://gocloud.dev/howto/blob/#azure
+# URL = "azblob://$web"
+
+# You can use a "prefix=" query parameter to target a subfolder of the bucket:
+# URL = "gs://<Bucket Name>?prefix=a/subfolder/"
+
+# If you are using a CloudFront CDN, deploy will invalidate the cache as needed.
+# cloudFrontDistributionID = <ID>
+
+[[deployment.targets]]
+ name = "awsdeploy"
+ URL = "s3://atcultsbeta?region=ap-south-1"
+ cloudFrontDistributionID = "EEU5QY8VOOF3L"
+
+# Optionally, you can include or exclude specific files.
+# See https://godoc.org/github.com/gobwas/glob#Glob for the glob pattern syntax.
+# If non-empty, the pattern is matched against the local path.
+# All paths are matched against in their filepath.ToSlash form.
+# If exclude is non-empty, and a local or remote file's path matches it, that file is not synced.
+# If include is non-empty, and a local or remote file's path does not match it, that file is not synced.
+# As a result, local files that don't pass the include/exclude filters are not uploaded to remote,
+# and remote files that don't pass the include/exclude filters are not deleted.
+# include = "**.html" # would only include files with ".html" suffix
+# exclude = "**.{jpg, png}" # would exclude files with ".jpg" or ".png" suffix
+
+# [[deployment.matchers]] configure behavior for files that match the Pattern.
+# See https://golang.org/pkg/regexp/syntax/ for pattern syntax.
+# Pattern searching is stopped on first match.
+
+# Samples:
+
+[[deployment.matchers]]
+# Cache static assets for 1 year.
+pattern = "^.+\\.(js|css|svg|ttf)$"
+cacheControl = "max-age=31536000, no-transform, public"
+gzip = true
+
+[[deployment.matchers]]
+pattern = "^.+\\.(png|jpg)$"
+cacheControl = "max-age=31536000, no-transform, public"
+gzip = false
+
+[[deployment.matchers]]
+# Set custom content type for /sitemap.xml
+pattern = "^sitemap\\.xml$"
+contentType = "application/xml"
+gzip = true
+
+[[deployment.matchers]]
+pattern = "^.+\\.(html|xml|json)$"
+gzip = true

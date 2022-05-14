@@ -1,0 +1,346 @@
+{{ define "main" }}
+
+{{ $data := index .Site.Data .Site.Language.Lang }}
+
+{{ if $data.homepage.slider_section.enable }}
+{{ with $data.homepage.slider_section }}
+
+<div class="page-banner home-banner mb-5">
+  <div class="slider-wrapper">
+    <div class="owl-carousel hero-carousel">
+      {{ range .slider_items }}
+      <div class="hero-carousel-item">
+        <img src="{{ .bg_image_url | absURL }}" alt="">
+        <div class="img-caption">
+          <div class="subhead">{{ .heading | markdownify }}</div>
+          <h1 class="mb-4">{{ .title | markdownify }}</h1>
+          {{ range .buttons }}
+          <a href="{{ .link | safeURL }}" class="btn btn-outline-light">{{ .label | markdownify }}</a>
+          {{ end }}
+        </div>
+      </div>
+      {{ end }}
+
+    </div>
+  </div> <!-- .slider-wrapper -->
+</div> <!-- .page-banner -->
+
+{{ end }}
+{{ end }}
+
+{{ if $data.homepage.about_section.enable }}
+{{ with $data.homepage.about_section }}
+
+<main>
+    <div class="page-section">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-6 py-3">
+            <div class="subhead">{{ .heading | markdownify }}</div>
+            <h2 class="title-section">{{ .title | markdownify }}</h2>
+
+            <p>{{ .description | markdownify }}</p>
+
+            <a href="{{ .link | safeURL }}" class="btn btn-primary mt-4">{{ .label | markdownify }}</a>
+          </div>
+          <div class="col-lg-6 py-3">
+            <div class="about-img">
+              <img src="{{ .image_url | absURL }}" alt="">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div> <!-- .page-section -->
+
+{{ end }}
+{{ end }}
+
+{{ if $data.homepage.services_section.enable }}
+{{ with $data.homepage.services_section }}
+
+
+    <div class="page-section">
+      <div class="container">
+        <div class="text-center">
+          <div class="subhead">{{ .heading | markdownify }}</div>
+          <h2 class="title-section">{{ .title | markdownify }}</h2>
+        </div>
+
+        <div class="row justify-content-center">
+          {{ range .services_items }}
+          <div class="col-md-6 col-lg-4 col-xl-3 py-3 mb-3">
+            <div class="text-center">
+              <div class="img-fluid mb-4">
+                <img src="{{ .image_url | absURL }}" alt="">
+              </div>
+              <h5>{{ .name | markdownify }}</h5>
+            </div>
+          </div>
+          {{ end }}
+
+
+        </div>
+      </div> <!-- .container -->
+    </div> <!-- .page-section -->
+
+{{ end }}
+{{ end }}
+
+{{ if $data.homepage.teams_section.enable }}
+{{ with $data.homepage.teams_section }}
+
+    <div class="page-section">
+      <div class="container">
+        <div class="text-center">
+          <div class="subhead">{{ .heading | markdownify }}</div>
+          <h2 class="title-section">{{ .title | markdownify }}</h2>
+        </div>
+
+        <div class="owl-carousel team-carousel mt-5">
+          {{ range .teams_loop }}
+          <div class="team-wrap">
+            <div class="team-profile">
+              <img src="{{ .image_url | absURL }}" alt="{{ .name | markdownify }}">
+            </div>
+            <div class="team-content">
+              <h5>{{ .name | markdownify }}</h5>
+              <div class="text-sm fg-grey">{{ .designation | markdownify }}</div>
+
+              <div class="social-button">
+                <a href="#"><span class="mai-logo-facebook-messenger"></span></a>
+                <a href="#"><span class="mai-call"></span></a>
+                <a href="mailto: {{ .email | markdownify }}"><span class="mai-mail"></span></a>
+              </div>
+            </div>
+          </div>
+          {{ end }}
+
+        </div>
+      </div> <!-- .container -->
+    </div> <!-- .page-section -->
+
+{{ end }}
+{{ end }}
+
+{{ if $data.homepage.portfolio_section.enable }}
+{{ with $data.homepage.portfolio_section }}
+
+    <div class="page-section">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-md-6 py-3">
+            <div class="subhead">{{ .heading | markdownify }}</div>
+            <h2 class="title-section">{{ .title | markdownify }}</h2>
+          </div>
+          <div class="col-md-6 py-3 text-md-right">
+            <a href="{{ .link | safeURL }}" class="btn btn-outline-primary">{{ .label | markdownify }} <span class="mai-arrow-forward ml-2"></span></a>
+          </div>
+        </div>
+
+        <div class="row mt-3">
+          {{ range .portfolio_items }}
+          <div class="col-lg-4 py-3">
+            <div class="portfolio">
+              <a href="{{ .link | safeURL }}" data-fancybox="portfolio">
+                <img src="{{ .image_url | absURL }}" alt="">
+              </a>
+            </div>
+          </div>
+          {{ end }}
+          
+        </div>
+      </div> <!-- .container -->
+    </div> <!-- .page-section -->
+
+{{ end }}
+{{ end }}
+
+{{ if $data.homepage.testimonial_section.enable }}
+{{ with $data.homepage.testimonial_section }}
+
+    <!-- Testimonials -->
+    <div class="page-section">
+      <div class="container">
+        <div class="owl-carousel testimonial-carousel">
+          {{ range .testimonial_loop }}
+          <div class="card-testimonial">
+            <div class="content">
+              {{ .description | markdownify }}
+            </div>
+            <div class="author">
+              <div class="avatar">
+                <img src="{{ .image_url | absURL }}" alt="">
+              </div>
+              <div class="d-inline-block ml-2">
+                <div class="author-name">{{ .name | markdownify }}</div>
+                <div class="author-info">{{ .designation | markdownify }}</div>
+              </div>
+            </div>
+          </div>
+          {{ end }}
+
+        </div> <!-- .row -->
+      </div> <!-- .container -->
+    </div> <!-- .page-section -->
+
+{{ end }}
+{{ end }}
+
+    <div class="page-section">
+      <div class="container">
+        <div class="text-center">
+          <div class="subhead">News</div>
+          <h2 class="title-section">Read Our Latest News</h2>
+        </div>
+
+        <div class="row my-5 card-blog-row">
+          <div class="col-lg-3 py-3">
+            <div class="card-blog">
+              <div class="header">
+                <div class="entry-footer">
+                  <div class="post-author">Sam Newman</div>
+                  <a href="#" class="post-date">23 Apr 2020</a>
+                </div>
+              </div>
+              <div class="body">
+                <div class="post-title"><a href="blog-single.html">What is Business Management?</a></div>
+              </div>
+              <div class="footer">
+                <a href="blog-single.html">Read More <span class="mai-chevron-forward text-sm"></span></a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 py-3">
+            <div class="card-blog">
+              <div class="header">
+                <div class="avatar">
+                  <img src="/img/person/person_1.jpg" alt="">
+                </div>
+                <div class="entry-footer">
+                  <div class="post-author">Sam Newman</div>
+                  <a href="#" class="post-date">23 Apr 2020</a>
+                </div>
+              </div>
+              <div class="body">
+                <div class="post-title"><a href="blog-single.html">What is Business Management?</a></div>
+                <div class="post-excerpt">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</div>
+              </div>
+              <div class="footer">
+                <a href="blog-single.html">Read More <span class="mai-chevron-forward text-sm"></span></a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 py-3">
+            <div class="card-blog">
+              <div class="header">
+                <div class="avatar">
+                  <img src="/img/person/person_2.jpg" alt="">
+                </div>
+                <div class="entry-footer">
+                  <div class="post-author">Sam Newman</div>
+                  <a href="#" class="post-date">23 Apr 2020</a>
+                </div>
+              </div>
+              <div class="body">
+                <div class="post-title"><a href="blog-single.html">What is Business Management?</a></div>
+                <div class="post-excerpt">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</div>
+              </div>
+              <div class="footer">
+                <a href="blog-single.html">Read More <span class="mai-chevron-forward text-sm"></span></a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 py-3">
+            <div class="card-blog">
+              <div class="header">
+                <div class="avatar">
+                  <img src="/img/person/person_3.jpg" alt="">
+                </div>
+                <div class="entry-footer">
+                  <div class="post-author">Sam Newman</div>
+                  <a href="#" class="post-date">23 Apr 2020</a>
+                </div>
+              </div>
+              <div class="body">
+                <div class="post-title"><a href="blog-single.html">What is Business Management?</a></div>
+                <div class="post-excerpt">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</div>
+              </div>
+              <div class="footer">
+                <a href="blog-single.html">Read More <span class="mai-chevron-forward text-sm"></span></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="text-center">
+          <a href="blog.html" class="btn btn-primary">View More</a>
+        </div>
+
+      </div> <!-- .container -->
+    </div> <!-- .page-section -->
+
+{{ if $data.homepage.contact_section.enable }}
+{{ with $data.homepage.contact_section }}
+
+    <div class="page-section">
+      <div class="container">
+        <div class="text-center">
+          <h2 class="title-section mb-3">{{ .heading | markdownify }}</h2>
+          <p>{{ .title | markdownify }} <a href="mailto:{{ .link | safeURL }}"></a></p>
+        </div>
+        <div class="row justify-content-center mt-5">
+          <div class="col-lg-8">
+            <form action="#" class="form-contact">
+              <div class="row">
+                <div class="col-sm-6 py-2">
+                  <label for="name" class="fg-grey">{{ .label1 | markdownify }}</label>
+                  <input type="text" class="form-control" id="name" placeholder="Enter name..">
+                </div>
+                <div class="col-sm-6 py-2">
+                  <label for="email" class="fg-grey">{{ .label2 | markdownify }}</label>
+                  <input type="text" class="form-control" id="email" placeholder="Email address..">
+                </div>
+                <div class="col-12 py-2">
+                  <label for="subject" class="fg-grey">{{ .label3 | markdownify }}</label>
+                  <input type="text" class="form-control" id="subject" placeholder="Subject..">
+                </div>
+                <div class="col-12 py-2">
+                  <label for="message" class="fg-grey">{{ .label4 | markdownify }}</label>
+                  <textarea id="message" rows="8" class="form-control" placeholder="Enter message.."></textarea>
+                </div>
+                <div class="col-12 mt-3">
+                  <button type="submit" class="btn btn-primary px-5">{{ .label | markdownify }}</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div> <!-- .container -->
+    </div> <!-- .page-section -->
+
+{{ end }}
+{{ end }}
+
+{{ if $data.homepage.client_section.enable }}
+{{ with $data.homepage.client_section }}
+
+    <div class="page-section">
+      <div class="container-fluid">
+        <div class="row row-cols-md-3 row-cols-lg-5 justify-content-center text-center">
+          {{ range .client_loop }}
+          <div class="py-3 px-5">
+            <img src="{{ .image_url | absURL }}" alt="">
+          </div>
+          {{ end }}
+
+        </div>
+      </div> <!-- .container-fluid -->
+    </div> <!-- .page-section -->
+
+{{ end }}
+{{ end }}
+  </main>
+
+
+
+{{ end }}

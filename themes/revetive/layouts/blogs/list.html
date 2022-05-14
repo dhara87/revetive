@@ -1,0 +1,19 @@
+{{ define "main" }}
+<main>
+    <div class="page-section">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    {{ range .Data.Pages }}
+                    <div class="row">
+                        <div class="col-md-6 col-lg-4 py-3">
+                            {{ .Render "blogs" }}
+                        </div>
+                    </div>
+                    {{ end }}
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+{{ end }}

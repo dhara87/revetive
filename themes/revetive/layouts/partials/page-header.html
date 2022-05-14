@@ -1,0 +1,15 @@
+<div class="page-banner bg-img bg-img-parallax overlay-dark" style="background-image: url('{{ .Params.page_header_bg}}');">
+    <div class="container h-100">
+      <div class="row justify-content-center align-items-center h-100">
+        <div class="col-lg-8">
+          <nav aria-label="breadcrumb">
+            <ol class="breadcrumb breadcrumb-dark bg-transparent justify-content-center py-0">
+              <li class="breadcrumb-item"><a href="{{ .Site.BaseURL | relLangURL }}">{{ .Site.Params.home }}</a></li>
+              <li class="breadcrumb-item active" aria-current="page">{{ .Title }}</li>
+            </ol>
+          </nav>
+          <h1 class="fg-white text-center">{{ .Title }}</h1>
+        </div>
+      </div>
+    </div>
+</div> <!-- .page-banner -->

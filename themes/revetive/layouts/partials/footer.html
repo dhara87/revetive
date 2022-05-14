@@ -1,0 +1,52 @@
+<footer class="page-footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-3 py-3">
+          <h3>{{ .Site.Params.footer_title }}</span></h3>
+        </div>
+        <div class="col-lg-3 py-3">
+          <h5>Contact Information</h5>
+          <p>{{ .Site.Params.address }}</p>
+          <p>{{ .Site.Params.email }}</p>
+          <p>{{ .Site.Params.phone1 | markdownify }}</p>
+        </div>
+        <div class="col-lg-3 py-3">
+          <h5>Company</h5>
+          <ul class="footer-menu">
+            <li><a href="#">Career</a></li>
+            <li><a href="#">Resources</a></li>
+            <li><a href="#">News & Feed</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-3 py-3">
+          <h5>Newsletter</h5>
+          <form action="#">
+            <input type="text" class="form-control" placeholder="Enter your email">
+            <button type="submit" class="btn btn-primary btn-sm mt-2">Submit</button>
+          </form>
+        </div>
+      </div>
+
+      <hr>
+
+      <div class="row mt-4">
+        <div class="col-md-6">
+          <p>{{ .Site.Params.copyright | markdownify }}</a></p>
+        </div>
+        <div class="col-md-6 text-right">
+          <div class="sosmed-button">
+            <a href="#"><span class="mai-logo-facebook-f"></span></a>
+            <a href="#"><span class="mai-logo-twitter"></span></a>
+            <a href="#"><span class="mai-logo-youtube"></span></a>
+            <a href="#"><span class="mai-logo-linkedin"></span></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  
+{{ "<!-- JS Plugins -->" | safeHTML }}
+{{ range .Site.Params.plugins.js}}
+<script src="{{ .link | absURL }}"></script>
+{{ end }}
+

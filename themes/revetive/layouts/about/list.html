@@ -1,0 +1,21 @@
+{{ define "main" }}
+<main>
+    <div class="page-section">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-6 py-3">
+            <div class="subhead">{{ .Params.about_title }}</div>
+            <h2 class="title-section">{{ .Params.about_subtitle }}</h2>
+
+            <p>{{ .Params.about_content | markdownify }}</p>
+          </div>
+          <div class="col-lg-6 py-3">
+            <div class="about-img">
+              <img src="{{ .Params.about_bg_image | relURL }}" alt="{{ .Params.about_title }}">
+            </div>
+          </div>
+        </div>
+      </div> <!-- .container -->
+    </div> <!-- .page-section -->
+</main>
+{{ end }}

@@ -1,0 +1,21 @@
+<div class="card-blog">
+    <div class="header">
+        <div class="avatar">
+            <img src="{{ .Params.image | relURL }}" alt="{{ .Params.blogsauthorname }}">
+        </div>
+        <div class="entry-footer">
+            <div class="post-author">{{ .Params.blogsauthorname }}</div>
+            <a href="#" class="post-date">{{ .Params.blogsdate }}</a>
+        </div>
+    </div>
+    <div class="body">
+        <div class="post-title"><a href="{{ .Permalink }}">{{ .Params.blogstitle }}</a>
+        </div>
+        <div class="post-excerpt">{{ .Params.blogsdescription }}
+        </div>
+    </div>
+    <div class="footer">
+        <a href="{{ .Permalink }}">Read More <span
+                class="mai-chevron-forward text-sm"></span></a>
+    </div>
+</div>
