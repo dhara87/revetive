@@ -3,19 +3,123 @@ backend:
   branch: master
 media_folder: "static/images"
 collections:
+  - name: "index" # Used in routes, ie.: /admin/collections/:slug/edit
+    label: "index" # Used in the UI, ie.: "New Post"
+    folder: "content/english" # The path to the folder where the documents are stored
+    create: false # Allow users to create new documents in this collection
+    fields: # The fields each document in this collection have
+    # aboutus
+      - { label: "First Image", name: "image_url", widget: "image" }
+      - { label: "About title", name: "about_title", widget: "string" }
+      - { label: "About Content", name: "about_content", widget: "markdown" }
+    # services
+      - { label: "Service Title", name: "service_title", widget: "string" }
+      - { label: "Service 1 Image 1", name: "service_image_url1", widget: "image" }
+      - { label: "Service Name1", name: "service_name1", widget: "string" }
+      - { label: "Service 2 Image 2", name: "service_image_url2", widget: "image" }
+      - { label: "Service Name2", name: "service_name2", widget: "string" }
+      - { label: "Service 3 Image 3", name: "service_image_url3", widget: "image" }
+      - { label: "Service Name3", name: "service_name3", widget: "string" }
+      - { label: "Service 4 Image 4", name: "service_image_url4", widget: "image" }
+      - { label: "Service Name4", name: "service_name4", widget: "string" }
+      - { label: "Service 5 Image 5", name: "service_image_url5", widget: "image" }
+      - { label: "Service Name5", name: "service_name5", widget: "string" }
+      - { label: "Service 6 Image 6", name: "service_image_url6", widget: "image" }
+      - { label: "Service Name6", name: "service_name6", widget: "string" }
+      - { label: "Service 7 Image 7", name: "service_image_url7", widget: "image" }
+      - { label: "Service Name7", name: "service_name7", widget: "string" }
+      - { label: "Service 8 Image 8", name: "service_image_url8", widget: "image" }
+      - { label: "Service Name8", name: "service_name8", widget: "string" }
+       # teams
+      - { label: "Team Title", name: "team_title", widget: "string" }
+      - { label: "Team Image 1", name: "team_image_1", widget: "image" }
+      - { label: "Team Name 1", name: "team_name_1", widget: "string" }
+      - { label: "Team Profile 1", name: "team_profile_1", widget: "string" }
+      - { label: "Team Image 2", name: "team_image_2", widget: "image" }
+      - { label: "Team Name 2", name: "team_name_2", widget: "string" }
+      - { label: "Team Profile 2", name: "team_profile_2", widget: "string" }
+      - { label: "Team Image 3", name: "team_image_3", widget: "image" }
+      - { label: "Team Name 3", name: "team_name_3", widget: "string" }
+      - { label: "Team Profile 3", name: "team_profile_3", widget: "string" }
+      # portfolio
+      - { label: "Portfolio Title", name: "portfolio_title", widget: "string" }
+      - { label: "Portfolio Image 1", name: "portfolio_image_1", widget: "image" }
+      - { label: "Portfolio Image 2", name: "portfolio_image_2", widget: "image" }
+      - { label: "Portfolio Image 3", name: "portfolio_image_3", widget: "image" }
+      - { label: "Portfolio Image 4", name: "portfolio_image_4", widget: "image" }
+      - { label: "Portfolio Image 5", name: "portfolio_image_5", widget: "image" }
+      - { label: "Portfolio Image 6", name: "portfolio_image_6", widget: "image" }
+      # testimonial
+      - { label: "Testimonial Content 1", name: "testimonial_content_1", widget: "text" }
+      - { label: "Testimonial Image 1", name: "testimonial_image_1", widget: "image" }
+      - { label: "Testimonial Name 1", name: "testimonial_name_1", widget: "string" }
+      - { label: "Testimonial Content 2", name: "testimonial_content_2", widget: "text" }
+      - { label: "Testimonial Image 2", name: "testimonial_image_2", widget: "image" }
+      - { label: "Testimonial Name 2", name: "testimonial_name_2", widget: "string" }
+      - { label: "Testimonial Content 3", name: "testimonial_content_3", widget: "text" }
+      - { label: "Testimonial Image 3", name: "testimonial_image_3", widget: "image" }
+      - { label: "Testimonial Name 3", name: "testimonial_name_3", widget: "string" }
+      - { label: "Testimonial Content 4", name: "testimonial_content_4", widget: "text" }
+      - { label: "Testimonial Image 4", name: "testimonial_image_4", widget: "image" }
+      - { label: "Testimonial Name 4", name: "testimonial_name_4", widget: "string" }
+      - { label: "Testimonial Content 5", name: "testimonial_content_5", widget: "text" }
+      - { label: "Testimonial Image 5", name: "testimonial_image_5", widget: "image" }
+      - { label: "Testimonial Name 5", name: "testimonial_name_5", widget: "string" }
+      - { label: "Testimonial Content 6", name: "testimonial_content_6", widget: "text" }
+      - { label: "Testimonial Image 6", name: "testimonial_image_6", widget: "image" }
+      - { label: "Testimonial Name 6", name: "testimonial_name_6", widget: "string" }
+      # contactus
+      - { label: "Contact Title", name: "contact_title", widget: "text" }
+      - { label: "Contact Email", name: "contact_email", widget: "string" }
+      # clients
+      - { label: "Client 1 Image", name: "client1_image", widget: "image" }
+      - { label: "Client 2 Image", name: "client2_image", widget: "image" }
+      - { label: "Client 3 Image", name: "client3_image", widget: "image" }
+      - { label: "Client 4 Image", name: "client4_image", widget: "image" }
+      - { label: "Client 5 Image", name: "client5_image", widget: "image" }
+
   - name: "aboutus" # Used in routes, ie.: /admin/collections/:slug/edit
     label: "about us" # Used in the UI, ie.: "New Post"
-    folder: "content/english/aboutus" # The path to the folder where the documents are stored
+    folder: "content/english/about" # The path to the folder where the documents are stored
     create: false # Allow users to create new documents in this collection
     fields: # The fields each document in this collection have
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Page header image", name: "page_header_bg", widget: "image" }
-      - { label: "Meta description", name: "metadescription", widget: "text" }
-      - { label: "About title", name: "abouttitle", widget: "string" }
-      - { label: boximage1, name: boximage1, widget: image}
-      - { label: boximage2, name: boximage2, widget: image}
-      - { label: boxcontent1, name: boxcontent1, widget: string}
-      - { label: boxcontent2, name: boxcontent2, widget: string}
-      - { label: "boxtitle1", name: "boxtitle1", widget: "string" }
-      - { label: "boxtitle2", name: "boxtitle2", widget: "string" }
-      - { label: "Intro", name: "intro", widget: "markdown" }
+      - { label: "Meta description", name: "description", widget: "text" }
+      - { label: "About title", name: "about_title", widget: "string" }
+      - { label: "About Subtitle", name: "about_subtitle", widget: "string" }
+      - { label: About Background Image, name: about_bg_image, widget: image}
+      - { label: "About Content", name: "about_content", widget: "markdown" }
+
+  - name: "Blogs" # Used in routes, ie.: /admin/collections/:slug/edit
+    label: "Blogs" # Used in the UI, ie.: "New Post"
+    folder: "content/english/blogs" # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    fields: # The fields each document in this collection have
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Page header image", name: "page_header_bg", widget: "image" }
+      - { label: "Publish Date", name: "date", widget: "datetime"}
+      - { label: "slug", name: "slug", widget: "string" }
+      - { label: "Person image", name: "image", widget: "image" }
+      - { label: "Blog Body", name: "body", widget: "markdown" }
+      - { label: "Background image", name: "bg_image", widget: "image" }
+      - { label: "Author Name", name: "blogsauthorname", widget: "string" }
+      - { label: "Blog Date", name: "blogsdate", widget: "datetime"}
+      - { label: "Blog title", name: "blogstitle", widget: "string" }
+      - { label: "Blog Subtitle", name: "blogsdescription", widget: "string" }
+      - { label: "Meta Description", name: metadescription, widget: string}
+      - { label: "Meta Keywords", name: "metakeywords", widget: "string" }
+      - { label: "tags", name: "tags", widget: "string" }
+
+  - name: "Services" # Used in routes, ie.: /admin/collections/:slug/edit
+    label: "Services" # Used in the UI, ie.: "New Post"
+    folder: "content/english/services" # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    fields: # The fields each document in this collection have
+      - { label: "service title", name: "service_title", widget: "string" }
+      - { label: "Page Header Image", name: "page_header_bg", widget: "image" }
+      - { label: "service image", name: "service_image", widget: "image" }
+      - { label: "Meta Keywords", name: "metakeywords", widget: "string" }
+      - { label: "Meta Description", name: "metadescription", widget: "text" }
+
+  

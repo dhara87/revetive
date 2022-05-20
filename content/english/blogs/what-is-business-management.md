@@ -3,16 +3,12 @@ title: "Blogs"
 page_header_bg: "/img/bg_image_3.jpg"
 date: 2022-02-18T15:27:17+06:00
 slug: "what is business management?"
-draft: false
-# Main description
 image: "/img/person/person_1.jpg"
 bg_image: "/img/bg_image_1.jpg"
-# bg_image: "images/news/news1.jpg"
 blogsauthorname: "Sam Newman"
-blogsdate: "23 Apr 2020"
+blogsdate: 2022-05-17T11:14:31.032Z
 blogstitle: "what is business management?"
 blogsdescription: "Lorem, ipsum dolor sit amet consectetur adipisicing elit."
-# meta description
 metadescription : "This is meta description"
 metakeywords: "This is meta keywords"
 tags: ["blogs category 1"]

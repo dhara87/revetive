@@ -1,346 +1,509 @@
 {{ define "main" }}
 
-{{ $data := index .Site.Data .Site.Language.Lang }}
-
-{{ if $data.homepage.slider_section.enable }}
-{{ with $data.homepage.slider_section }}
-
 <div class="page-banner home-banner mb-5">
   <div class="slider-wrapper">
     <div class="owl-carousel hero-carousel">
-      {{ range .slider_items }}
       <div class="hero-carousel-item">
-        <img src="{{ .bg_image_url | absURL }}" alt="">
+        <img src="{{ .Params.slider1_image_url }}" alt="{{ .Params.slider1_subtitle }}">
         <div class="img-caption">
-          <div class="subhead">{{ .heading | markdownify }}</div>
-          <h1 class="mb-4">{{ .title | markdownify }}</h1>
-          {{ range .buttons }}
-          <a href="{{ .link | safeURL }}" class="btn btn-outline-light">{{ .label | markdownify }}</a>
-          {{ end }}
+          <div class="subhead">{{ .Params.slider1_title }}</div>
+          <h1 class="mb-4">{{ .Params.slider1_subtitle }}</h1>
+          <a href="#services" class="btn btn-outline-light">Get Started</a>
         </div>
       </div>
-      {{ end }}
-
+      <div class="hero-carousel-item">
+        <img src="{{ .Params.slider2_image_url }}" alt="">
+        <div class="img-caption">
+          <h1 class="mb-4">{{ .Params.slider2_title }}</h1>
+          <a href="#services" class="btn btn-outline-light">Get Started</a>
+          <a href="#services" class="btn btn-primary">See Pricing</a>
+        </div>
+      </div>
+      <div class="hero-carousel-item">
+        <img src="{{ .Params.slider3_image_url }}" alt="{{ .Params.slider3_subtitle }}">
+        <div class="img-caption">
+          <div class="subhead">{{ .Params.slider3_title }}</div>
+          <h1 class="mb-4">{{ .Params.slider3_subtitle }}</h1>
+          <a href="#services" class="btn btn-primary">Read More</a>
+        </div>
+      </div>
     </div>
   </div> <!-- .slider-wrapper -->
 </div> <!-- .page-banner -->
 
-{{ end }}
-{{ end }}
-
-{{ if $data.homepage.about_section.enable }}
-{{ with $data.homepage.about_section }}
-
 <main>
-    <div class="page-section">
-      <div class="container">
-        <div class="row align-items-center">
-          <div class="col-lg-6 py-3">
-            <div class="subhead">{{ .heading | markdownify }}</div>
-            <h2 class="title-section">{{ .title | markdownify }}</h2>
+  <div class="page-section">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-6 py-3">
+          <div class="subhead">About Us</div>
+          <h2 class="title-section">{{ .Params.about_title }}</h2>
 
-            <p>{{ .description | markdownify }}</p>
+          <p>{{ .Params.about_content }}</p>
 
-            <a href="{{ .link | safeURL }}" class="btn btn-primary mt-4">{{ .label | markdownify }}</a>
+          <a href="/about" class="btn btn-primary mt-4">Read More</a>
+        </div>
+        <div class="col-lg-6 py-3">
+          <div class="about-img">
+            <img src="{{ .Params.about_image_url }}" alt="{{ .Params.about_title }}">
           </div>
-          <div class="col-lg-6 py-3">
-            <div class="about-img">
-              <img src="{{ .image_url | absURL }}" alt="">
+        </div>
+      </div>
+    </div>
+  </div> <!-- .page-section -->
+
+  <div class="page-section">
+    <div class="container">
+      <div class="text-center">
+        <div class="subhead">Our Services</div>
+        <h2 class="title-section">{{ .Params.service_title }}</h2>
+      </div>
+
+      <div class="row justify-content-center">
+        <div class="col-md-6 col-lg-4 col-xl-3 py-3 mb-3">
+          <div class="text-center">
+            <div class="img-fluid mb-4">
+              <img src="{{ .Params.service_image_url1 }}" alt="{{ .Params.service_name1 }}">
+            </div>
+            <h5>{{ .Params.service_name1 }}</h5>
+          </div>
+
+        </div>
+        <div class="col-md-6 col-lg-4 col-xl-3 py-3 mb-3">
+          <div class="text-center">
+            <div class="img-fluid mb-4">
+              <img src="{{ .Params.service_image_url2 }}" alt="{{ .Params.service_name2 }}">
+            </div>
+            <h5>{{ .Params.service_name2 }}</h5>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4 col-xl-3 py-3 mb-3">
+          <div class="text-center">
+            <div class="img-fluid mb-4">
+              <img src="{{ .Params.service_image_url3 }}" alt="{{ .Params.service_name3 }}">
+            </div>
+            <h5>{{ .Params.service_name3 }}</h5>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4 col-xl-3 py-3 mb-3">
+          <div class="text-center">
+            <div class="img-fluid mb-4">
+              <img src="{{ .Params.service_image_url4 }}" alt="{{ .Params.service_name4 }}">
+            </div>
+            <h5>{{ .Params.service_name4 }}</h5>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4 col-xl-3 py-3 mb-3">
+          <div class="text-center">
+            <div class="img-fluid mb-4">
+              <img src="{{ .Params.service_image_url5 }}" alt="{{ .Params.service_name5 }}">
+            </div>
+            <h5>{{ .Params.service_name5 }}</h5>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4 col-xl-3 py-3 mb-3">
+          <div class="text-center">
+            <div class="img-fluid mb-4">
+              <img src="{{ .Params.service_image_url6 }}" alt="{{ .Params.service_name6 }}">
+            </div>
+            <h5>{{ .Params.service_name6 }}</h5>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4 col-xl-3 py-3 mb-3">
+          <div class="text-center">
+            <div class="img-fluid mb-4">
+              <img src="{{ .Params.service_image_url7 }}" alt="{{ .Params.service_name7 }}">
+            </div>
+            <h5>{{ .Params.service_name7 }}</h5>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4 col-xl-3 py-3 mb-3">
+          <div class="text-center">
+            <div class="img-fluid mb-4">
+              <img src="{{ .Params.service_image_url8 }}" alt="{{ .Params.service_name8 }}">
+            </div>
+            <h5>{{ .Params.service_name8 }}</h5>
+          </div>
+        </div>
+
+      </div>
+    </div> <!-- .container -->
+  </div> <!-- .page-section -->
+
+  <div class="page-section">
+    <div class="container">
+      <div class="text-center">
+        <div class="subhead">Our Teams</div>
+        <h2 class="title-section">{{ .Params.team_title }}</h2>
+      </div>
+
+      <div class="owl-carousel team-carousel mt-5">
+        <div class="team-wrap">
+          <div class="team-profile">
+            <img src="{{ .Params.team_image_1 }}" alt="">
+          </div>
+          <div class="team-content">
+            <h5>{{ .Params.team_name_1 }}</h5>
+            <div class="text-sm fg-grey">{{ .Params.team_profile_1 }}</div>
+
+            <div class="social-button">
+              <a href="#"><span class="mai-logo-facebook-messenger"></span></a>
+              <a href="#"><span class="mai-call"></span></a>
+              <a href="#"><span class="mai-mail"></span></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="team-wrap">
+          <div class="team-profile">
+            <img src="{{ .Params.team_image_2 }}" alt="">
+          </div>
+          <div class="team-content">
+            <h5>{{ .Params.team_name_2 }}</h5>
+            <div class="text-sm fg-grey">{{ .Params.team_profile_2 }}</div>
+
+            <div class="social-button">
+              <a href="#"><span class="mai-logo-facebook-messenger"></span></a>
+              <a href="#"><span class="mai-call"></span></a>
+              <a href="#"><span class="mai-mail"></span></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="team-wrap">
+          <div class="team-profile">
+            <img src="{{ .Params.team_image_3 }}" alt="">
+          </div>
+          <div class="team-content">
+            <h5>{{ .Params.team_name_3 }}</h5>
+            <div class="text-sm fg-grey">{{ .Params.team_profile_3 }}</div>
+
+            <div class="social-button">
+              <a href="#"><span class="mai-logo-facebook-messenger"></span></a>
+              <a href="#"><span class="mai-call"></span></a>
+              <a href="#"><span class="mai-mail"></span></a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div> <!-- .container -->
+  </div> <!-- .page-section -->
+
+  <div class="page-section">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-md-6 py-3">
+          <div class="subhead">Portfolio</div>
+          <h2 class="title-section">{{ .Params.portfolio_title }}</h2>
+        </div>
+        <div class="col-md-6 py-3 text-md-right">
+          <a href="portfolio.html" class="btn btn-outline-primary">Browse Projects <span class="mai-arrow-forward ml-2"></span></a>
+        </div>
+      </div>
+
+      <div class="row mt-3">
+        <div class="col-lg-4 py-3">
+          <div class="portfolio">
+            <a href="{{ .Params.portfolio_image_1 }}" data-fancybox="portfolio">
+              <img src="{{ .Params.portfolio_image_1 }}" alt="{{ .Params.portfolio_title }}">
+            </a>
+          </div>
+        </div>
+        <div class="col-lg-4 py-3">
+          <div class="portfolio">
+            <a href="{{ .Params.portfolio_image_2 }}" data-fancybox="portfolio">
+              <img src="{{ .Params.portfolio_image_2 }}" alt="{{ .Params.portfolio_title }}">
+            </a>
+          </div>
+        </div>
+        <div class="col-lg-4 py-3">
+          <div class="portfolio">
+            <a href="{{ .Params.portfolio_image_3 }}" data-fancybox="portfolio">
+              <img src="{{ .Params.portfolio_image_3 }}" alt="{{ .Params.portfolio_title }}">
+            </a>
+          </div>
+        </div>
+        <div class="col-lg-4 py-3">
+          <div class="portfolio">
+            <a href="{{ .Params.portfolio_image_4 }}" data-fancybox="portfolio">
+              <img src="{{ .Params.portfolio_image_4 }}" alt="{{ .Params.portfolio_title }}">
+            </a>
+          </div>
+        </div>
+        <div class="col-lg-4 py-3">
+          <div class="portfolio">
+            <a href="{{ .Params.portfolio_image_5 }}" data-fancybox="portfolio">
+              <img src="{{ .Params.portfolio_image_5 }}" alt="{{ .Params.portfolio_title }}">
+            </a>
+          </div>
+        </div>
+        <div class="col-lg-4 py-3">
+          <div class="portfolio">
+            <a href="{{ .Params.portfolio_image_6 }}" data-fancybox="portfolio">
+              <img src="{{ .Params.portfolio_image_6 }}" alt="{{ .Params.portfolio_title }}">
+            </a>
+          </div>
+        </div>
+      </div>
+    </div> <!-- .container -->
+  </div> <!-- .page-section -->
+
+  <!-- Testimonials -->
+  <div class="page-section">
+    <div class="container">
+      <div class="owl-carousel testimonial-carousel">
+        <div class="card-testimonial">
+          <div class="content">
+            {{ .Params.testimonial_content_1 }}
+          </div>
+          <div class="author">
+            <div class="avatar">
+              <img src="{{ .Params.testimonial_image_1 }}" alt="{{ .Params.testimonial_name_1 }}">
+            </div>
+            <div class="d-inline-block ml-2">
+              <div class="author-name">{{ .Params.testimonial_name_1 }}</div>
+              <div class="author-info">{{ .Params.testimonial_profile_1 }}</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card-testimonial">
+          <div class="content">
+            {{ .Params.testimonial_content_2 }}
+          </div>
+          <div class="author">
+            <div class="avatar">
+              <img src="{{ .Params.testimonial_image_2 }}" alt="{{ .Params.testimonial_name_2 }}">
+            </div>
+            <div class="d-inline-block ml-2">
+              <div class="author-name">{{ .Params.testimonial_name_2 }}</div>
+              <div class="author-info">{{ .Params.testimonial_profile_2 }}</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card-testimonial">
+          <div class="content">
+            {{ .Params.testimonial_content_3 }}
+          </div>
+          <div class="author">
+            <div class="avatar">
+              <img src="{{ .Params.testimonial_image_3 }}" alt="{{ .Params.testimonial_name_3 }}">
+            </div>
+            <div class="d-inline-block ml-2">
+              <div class="author-name">{{ .Params.testimonial_name_3 }}</div>
+              <div class="author-info">{{ .Params.testimonial_profile_3 }}</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card-testimonial">
+          <div class="content">
+            {{ .Params.testimonial_content_4 }}
+          </div>
+          <div class="author">
+            <div class="avatar">
+              <img src="{{ .Params.testimonial_image_1 }}" alt="{{ .Params.testimonial_name_4 }}">
+            </div>
+            <div class="d-inline-block ml-2">
+              <div class="author-name">{{ .Params.testimonial_name_4 }}</div>
+              <div class="author-info">{{ .Params.testimonial_profile_4 }}</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card-testimonial">
+          <div class="content">
+            {{ .Params.testimonial_content_5 }}
+          </div>
+          <div class="author">
+            <div class="avatar">
+              <img src="{{ .Params.testimonial_image_2 }}" alt="{{ .Params.testimonial_name_5 }}">
+            </div>
+            <div class="d-inline-block ml-2">
+              <div class="author-name">{{ .Params.testimonial_name_5 }}</div>
+              <div class="author-info">{{ .Params.testimonial_profile_5 }}</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card-testimonial">
+          <div class="content">
+            {{ .Params.testimonial_content_6 }}
+          </div>
+          <div class="author">
+            <div class="avatar">
+              <img src="{{ .Params.testimonial_image_3 }}" alt="{{ .Params.testimonial_name_6 }}">
+            </div>
+            <div class="d-inline-block ml-2">
+              <div class="author-name">{{ .Params.testimonial_name_6 }}</div>
+              <div class="author-info">{{ .Params.testimonial_profile_6 }}</div>
+            </div>
+          </div>
+        </div>
+
+      </div> <!-- .row -->
+    </div> <!-- .container -->
+  </div> <!-- .page-section -->
+
+  <div class="page-section">
+    <div class="container">
+      <div class="text-center">
+        <div class="subhead">News</div>
+        <h2 class="title-section">Read Our Latest News</h2>
+      </div>
+
+      <div class="row my-5 card-blog-row">
+        <div class="col-lg-3 py-3">
+          <div class="card-blog">
+            <div class="header">
+              <div class="entry-footer">
+                <div class="post-author">Sam Newman</div>
+                <a href="#" class="post-date">23 Apr 2020</a>
+              </div>
+            </div>
+            <div class="body">
+              <div class="post-title"><a href="blog-single.html">What is Business Management?</a></div>
+            </div>
+            <div class="footer">
+              <a href="blog-single.html">Read More <span class="mai-chevron-forward text-sm"></span></a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 py-3">
+          <div class="card-blog">
+            <div class="header">
+              <div class="avatar">
+                <img src="/img/person/person_1.jpg" alt="">
+              </div>
+              <div class="entry-footer">
+                <div class="post-author">Sam Newman</div>
+                <a href="#" class="post-date">23 Apr 2020</a>
+              </div>
+            </div>
+            <div class="body">
+              <div class="post-title"><a href="blog-single.html">What is Business Management?</a></div>
+              <div class="post-excerpt">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</div>
+            </div>
+            <div class="footer">
+              <a href="blog-single.html">Read More <span class="mai-chevron-forward text-sm"></span></a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 py-3">
+          <div class="card-blog">
+            <div class="header">
+              <div class="avatar">
+                <img src="/img/person/person_2.jpg" alt="">
+              </div>
+              <div class="entry-footer">
+                <div class="post-author">Sam Newman</div>
+                <a href="#" class="post-date">23 Apr 2020</a>
+              </div>
+            </div>
+            <div class="body">
+              <div class="post-title"><a href="blog-single.html">What is Business Management?</a></div>
+              <div class="post-excerpt">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</div>
+            </div>
+            <div class="footer">
+              <a href="blog-single.html">Read More <span class="mai-chevron-forward text-sm"></span></a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 py-3">
+          <div class="card-blog">
+            <div class="header">
+              <div class="avatar">
+                <img src="/img/person/person_3.jpg" alt="">
+              </div>
+              <div class="entry-footer">
+                <div class="post-author">Sam Newman</div>
+                <a href="#" class="post-date">23 Apr 2020</a>
+              </div>
+            </div>
+            <div class="body">
+              <div class="post-title"><a href="blog-single.html">What is Business Management?</a></div>
+              <div class="post-excerpt">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</div>
+            </div>
+            <div class="footer">
+              <a href="blog-single.html">Read More <span class="mai-chevron-forward text-sm"></span></a>
             </div>
           </div>
         </div>
       </div>
-    </div> <!-- .page-section -->
 
-{{ end }}
-{{ end }}
+      <div class="text-center">
+        <a href="blog.html" class="btn btn-primary">View More</a>
+      </div>
 
-{{ if $data.homepage.services_section.enable }}
-{{ with $data.homepage.services_section }}
+    </div> <!-- .container -->
+  </div> <!-- .page-section -->
 
-
-    <div class="page-section">
-      <div class="container">
-        <div class="text-center">
-          <div class="subhead">{{ .heading | markdownify }}</div>
-          <h2 class="title-section">{{ .title | markdownify }}</h2>
-        </div>
-
-        <div class="row justify-content-center">
-          {{ range .services_items }}
-          <div class="col-md-6 col-lg-4 col-xl-3 py-3 mb-3">
-            <div class="text-center">
-              <div class="img-fluid mb-4">
-                <img src="{{ .image_url | absURL }}" alt="">
+  <div class="page-section">
+    <div class="container">
+      <div class="text-center">
+        <h2 class="title-section mb-3">Stay in touch</h2>
+        <p>{{ .Params.contact_title }} <a href="mailto:{{ .Params.contact_email }}">{{ .Params.contact_email }}</a></p>
+      </div>
+      <div class="row justify-content-center mt-5">
+        <div class="col-lg-8">
+          <form action="#" class="form-contact">
+            <div class="row">
+              <div class="col-sm-6 py-2">
+                <label for="name" class="fg-grey">Name</label>
+                <input type="text" class="form-control" id="name" placeholder="Enter name..">
               </div>
-              <h5>{{ .name | markdownify }}</h5>
-            </div>
-          </div>
-          {{ end }}
-
-
-        </div>
-      </div> <!-- .container -->
-    </div> <!-- .page-section -->
-
-{{ end }}
-{{ end }}
-
-{{ if $data.homepage.teams_section.enable }}
-{{ with $data.homepage.teams_section }}
-
-    <div class="page-section">
-      <div class="container">
-        <div class="text-center">
-          <div class="subhead">{{ .heading | markdownify }}</div>
-          <h2 class="title-section">{{ .title | markdownify }}</h2>
-        </div>
-
-        <div class="owl-carousel team-carousel mt-5">
-          {{ range .teams_loop }}
-          <div class="team-wrap">
-            <div class="team-profile">
-              <img src="{{ .image_url | absURL }}" alt="{{ .name | markdownify }}">
-            </div>
-            <div class="team-content">
-              <h5>{{ .name | markdownify }}</h5>
-              <div class="text-sm fg-grey">{{ .designation | markdownify }}</div>
-
-              <div class="social-button">
-                <a href="#"><span class="mai-logo-facebook-messenger"></span></a>
-                <a href="#"><span class="mai-call"></span></a>
-                <a href="mailto: {{ .email | markdownify }}"><span class="mai-mail"></span></a>
+              <div class="col-sm-6 py-2">
+                <label for="email" class="fg-grey">Email</label>
+                <input type="text" class="form-control" id="email" placeholder="Email address..">
+              </div>
+              <div class="col-12 py-2">
+                <label for="subject" class="fg-grey">Subject</label>
+                <input type="text" class="form-control" id="subject" placeholder="Subject..">
+              </div>
+              <div class="col-12 py-2">
+                <label for="message" class="fg-grey">Message</label>
+                <textarea id="message" rows="8" class="form-control" placeholder="Enter message.."></textarea>
+              </div>
+              <div class="col-12 mt-3">
+                <button type="submit" class="btn btn-primary px-5">Submit</button>
               </div>
             </div>
-          </div>
-          {{ end }}
-
+          </form>
         </div>
-      </div> <!-- .container -->
-    </div> <!-- .page-section -->
+      </div>
+    </div> <!-- .container -->
+  </div> <!-- .page-section -->
 
-{{ end }}
-{{ end }}
-
-{{ if $data.homepage.portfolio_section.enable }}
-{{ with $data.homepage.portfolio_section }}
-
-    <div class="page-section">
-      <div class="container">
-        <div class="row align-items-center">
-          <div class="col-md-6 py-3">
-            <div class="subhead">{{ .heading | markdownify }}</div>
-            <h2 class="title-section">{{ .title | markdownify }}</h2>
-          </div>
-          <div class="col-md-6 py-3 text-md-right">
-            <a href="{{ .link | safeURL }}" class="btn btn-outline-primary">{{ .label | markdownify }} <span class="mai-arrow-forward ml-2"></span></a>
-          </div>
+  <div class="page-section">
+    <div class="container-fluid">
+      <div class="row row-cols-md-3 row-cols-lg-5 justify-content-center text-center">
+        <div class="py-3 px-5">
+          <img src="{{ .Params.client1_image }}" alt="">
         </div>
-
-        <div class="row mt-3">
-          {{ range .portfolio_items }}
-          <div class="col-lg-4 py-3">
-            <div class="portfolio">
-              <a href="{{ .link | safeURL }}" data-fancybox="portfolio">
-                <img src="{{ .image_url | absURL }}" alt="">
-              </a>
-            </div>
-          </div>
-          {{ end }}
-          
+        <div class="py-3 px-5">
+          <img src="{{ .Params.client2_image }}" alt="">
         </div>
-      </div> <!-- .container -->
-    </div> <!-- .page-section -->
-
-{{ end }}
-{{ end }}
-
-{{ if $data.homepage.testimonial_section.enable }}
-{{ with $data.homepage.testimonial_section }}
-
-    <!-- Testimonials -->
-    <div class="page-section">
-      <div class="container">
-        <div class="owl-carousel testimonial-carousel">
-          {{ range .testimonial_loop }}
-          <div class="card-testimonial">
-            <div class="content">
-              {{ .description | markdownify }}
-            </div>
-            <div class="author">
-              <div class="avatar">
-                <img src="{{ .image_url | absURL }}" alt="">
-              </div>
-              <div class="d-inline-block ml-2">
-                <div class="author-name">{{ .name | markdownify }}</div>
-                <div class="author-info">{{ .designation | markdownify }}</div>
-              </div>
-            </div>
-          </div>
-          {{ end }}
-
-        </div> <!-- .row -->
-      </div> <!-- .container -->
-    </div> <!-- .page-section -->
-
-{{ end }}
-{{ end }}
-
-    <div class="page-section">
-      <div class="container">
-        <div class="text-center">
-          <div class="subhead">News</div>
-          <h2 class="title-section">Read Our Latest News</h2>
+        <div class="py-3 px-5">
+          <img src="{{ .Params.client3_image }}" alt="">
         </div>
-
-        <div class="row my-5 card-blog-row">
-          <div class="col-lg-3 py-3">
-            <div class="card-blog">
-              <div class="header">
-                <div class="entry-footer">
-                  <div class="post-author">Sam Newman</div>
-                  <a href="#" class="post-date">23 Apr 2020</a>
-                </div>
-              </div>
-              <div class="body">
-                <div class="post-title"><a href="blog-single.html">What is Business Management?</a></div>
-              </div>
-              <div class="footer">
-                <a href="blog-single.html">Read More <span class="mai-chevron-forward text-sm"></span></a>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-3 py-3">
-            <div class="card-blog">
-              <div class="header">
-                <div class="avatar">
-                  <img src="/img/person/person_1.jpg" alt="">
-                </div>
-                <div class="entry-footer">
-                  <div class="post-author">Sam Newman</div>
-                  <a href="#" class="post-date">23 Apr 2020</a>
-                </div>
-              </div>
-              <div class="body">
-                <div class="post-title"><a href="blog-single.html">What is Business Management?</a></div>
-                <div class="post-excerpt">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</div>
-              </div>
-              <div class="footer">
-                <a href="blog-single.html">Read More <span class="mai-chevron-forward text-sm"></span></a>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-3 py-3">
-            <div class="card-blog">
-              <div class="header">
-                <div class="avatar">
-                  <img src="/img/person/person_2.jpg" alt="">
-                </div>
-                <div class="entry-footer">
-                  <div class="post-author">Sam Newman</div>
-                  <a href="#" class="post-date">23 Apr 2020</a>
-                </div>
-              </div>
-              <div class="body">
-                <div class="post-title"><a href="blog-single.html">What is Business Management?</a></div>
-                <div class="post-excerpt">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</div>
-              </div>
-              <div class="footer">
-                <a href="blog-single.html">Read More <span class="mai-chevron-forward text-sm"></span></a>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-3 py-3">
-            <div class="card-blog">
-              <div class="header">
-                <div class="avatar">
-                  <img src="/img/person/person_3.jpg" alt="">
-                </div>
-                <div class="entry-footer">
-                  <div class="post-author">Sam Newman</div>
-                  <a href="#" class="post-date">23 Apr 2020</a>
-                </div>
-              </div>
-              <div class="body">
-                <div class="post-title"><a href="blog-single.html">What is Business Management?</a></div>
-                <div class="post-excerpt">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</div>
-              </div>
-              <div class="footer">
-                <a href="blog-single.html">Read More <span class="mai-chevron-forward text-sm"></span></a>
-              </div>
-            </div>
-          </div>
+        <div class="py-3 px-5">
+          <img src="{{ .Params.client4_image }}" alt="">
         </div>
-
-        <div class="text-center">
-          <a href="blog.html" class="btn btn-primary">View More</a>
+        <div class="py-3 px-5">
+          <img src="{{ .Params.client5_image }}" alt="">
         </div>
+      </div>
+    </div> <!-- .container-fluid -->
+  </div> <!-- .page-section -->
 
-      </div> <!-- .container -->
-    </div> <!-- .page-section -->
-
-{{ if $data.homepage.contact_section.enable }}
-{{ with $data.homepage.contact_section }}
-
-    <div class="page-section">
-      <div class="container">
-        <div class="text-center">
-          <h2 class="title-section mb-3">{{ .heading | markdownify }}</h2>
-          <p>{{ .title | markdownify }} <a href="mailto:{{ .link | safeURL }}"></a></p>
-        </div>
-        <div class="row justify-content-center mt-5">
-          <div class="col-lg-8">
-            <form action="#" class="form-contact">
-              <div class="row">
-                <div class="col-sm-6 py-2">
-                  <label for="name" class="fg-grey">{{ .label1 | markdownify }}</label>
-                  <input type="text" class="form-control" id="name" placeholder="Enter name..">
-                </div>
-                <div class="col-sm-6 py-2">
-                  <label for="email" class="fg-grey">{{ .label2 | markdownify }}</label>
-                  <input type="text" class="form-control" id="email" placeholder="Email address..">
-                </div>
-                <div class="col-12 py-2">
-                  <label for="subject" class="fg-grey">{{ .label3 | markdownify }}</label>
-                  <input type="text" class="form-control" id="subject" placeholder="Subject..">
-                </div>
-                <div class="col-12 py-2">
-                  <label for="message" class="fg-grey">{{ .label4 | markdownify }}</label>
-                  <textarea id="message" rows="8" class="form-control" placeholder="Enter message.."></textarea>
-                </div>
-                <div class="col-12 mt-3">
-                  <button type="submit" class="btn btn-primary px-5">{{ .label | markdownify }}</button>
-                </div>
-              </div>
-            </form>
-          </div>
-        </div>
-      </div> <!-- .container -->
-    </div> <!-- .page-section -->
-
-{{ end }}
-{{ end }}
-
-{{ if $data.homepage.client_section.enable }}
-{{ with $data.homepage.client_section }}
-
-    <div class="page-section">
-      <div class="container-fluid">
-        <div class="row row-cols-md-3 row-cols-lg-5 justify-content-center text-center">
-          {{ range .client_loop }}
-          <div class="py-3 px-5">
-            <img src="{{ .image_url | absURL }}" alt="">
-          </div>
-          {{ end }}
-
-        </div>
-      </div> <!-- .container-fluid -->
-    </div> <!-- .page-section -->
-
-{{ end }}
-{{ end }}
-  </main>
-
-
+</main>
 
 {{ end }}
