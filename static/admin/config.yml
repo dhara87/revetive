@@ -8,8 +8,18 @@ collections:
     folder: "content/english" # The path to the folder where the documents are stored
     create: false # Allow users to create new documents in this collection
     fields: # The fields each document in this collection have
+    # slider
+      - { label: "Slider 1 Images", name: "slider1_image_url", widget: "image" }
+      - { label: "Slider 1 title", name: "slider1_title", widget: "string" }
+      - { label: "Slider 1 sub title", name: "slider1_subtitle", widget: "string" }
+      - { label: "Slider 2 Images", name: "slider2_image_url", widget: "image" }
+      - { label: "Slider 2 title", name: "slider2_title", widget: "string" }
+      - { label: "Slider 3 Images", name: "slider3_image_url", widget: "image" }
+      - { label: "Slider 3 title", name: "slider3_title", widget: "string" }
+      - { label: "Slider 3 sub title", name: "slider3_subtitle", widget: "string" }
+
     # aboutus
-      - { label: "First Image", name: "image_url", widget: "image" }
+      - { label: "First Image", name: "about_image_url", widget: "image" }
       - { label: "About title", name: "about_title", widget: "string" }
       - { label: "About Content", name: "about_content", widget: "markdown" }
     # services
@@ -116,8 +126,11 @@ collections:
     folder: "content/english/services" # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
     fields: # The fields each document in this collection have
+      # - { label: "Header title", name: "title", widget: "string" }
+      # - { label: "Header Sub title", name: "main_title", widget: "string" }
+      # - { label: "Page Header Image", name: "page_header_bg", widget: "image" }
+      # - { label: "Section Heading", name: "heading", widget: "string" }
       - { label: "service title", name: "service_title", widget: "string" }
-      - { label: "Page Header Image", name: "page_header_bg", widget: "image" }
       - { label: "service image", name: "service_image", widget: "image" }
       - { label: "Meta Keywords", name: "metakeywords", widget: "string" }
       - { label: "Meta Description", name: "metadescription", widget: "text" }
