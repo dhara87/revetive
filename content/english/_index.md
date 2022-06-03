@@ -39,7 +39,7 @@ team_title: The Expert Team on ReveTive
 team_image_1: /images/testimonial.jpg
 team_name_1: Walter White
 team_profile_1: Chief Executive Officer
-team_image_2: /img/teams/team_2.jpg
+team_image_2: https://images.pexels.com/photos/1097456/pexels-photo-1097456.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1
 team_profile_2: Chief Technology Officer
 team_image_3: /img/teams/team_3.jpg
 team_name_3: Anna Anderson
