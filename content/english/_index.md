@@ -36,7 +36,7 @@ service_image_url6: /img/icons/graphics_design.svg
 service_image_url7: /img/icons/product_design.svg
 service_image_url8: /img/icons/seo_and_marketing.svg
 team_title: The Expert Team on ReveTive
-team_image_1: /img/teams/team_1.jpg
+team_image_1: /images/testimonial.jpg
 team_name_1: Walter White
 team_profile_1: Chief Executive Officer
 team_image_2: /img/teams/team_2.jpg
