@@ -1,80 +1,94 @@
 ---
-slider1_image_url: "/img/bg_image_1.jpg"
-slider1_title: "We're design studio believe in ideas"
-slider1_subtitle: "Creative Design"
-slider2_image_url: "/img/bg_image_2.jpg"
-slider2_title: "We combine Design, Thinking, and Technical"
-slider3_image_url: "/img/bg_image_3.jpg"
-slider3_title: "Easy way to build perfect website"
-slider3_subtitle: "Beautify handcrafted templates for your website"
-about_image_url: "/img/about.jpg"
-about_title: "We are Professional Teams to Growth your Business"
-about_content: "But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of"
-service_title: "See what can we do for your Projects"
-service_image_url1: "/img/icons/web_development.svg"
-service_name1: "Web Development"
-service_image_url2: "/img/icons/graphics_design.svg"
-service_name2: "Graphics Design"
-service_image_url3: "/img/icons/customer_services.svg"
-service_name3: "Data Analyst"
-service_image_url4: "/img/icons/data_analyst.svg"
-service_name4: "Digital Marketing"
-service_image_url5: "/img/icons/graphics_design.svg"
-service_name5: "Graphics Design"
-service_image_url6: "/img/icons/graphics_design.svg"
-service_name6: "Product Design"
-service_image_url7: "/img/icons/product_design.svg"
-service_name7: "SEO & Marketing"
-service_image_url8: "/img/icons/seo_and_marketing.svg"
-service_name8: "SEO & Marketing"
-team_title: "The Expert Team on ReveTive"
-team_image_1: "/img/teams/team_1.jpg"
-team_name_1: "Walter White"
-team_profile_1: "Chief Executive Officer"
-team_image_2: "/img/teams/team_2.jpg"
-team_name_2: "Sarah Johanson"
-team_profile_2: "Chief Technology Officer"
-team_image_3: "/img/teams/team_3.jpg"
-team_name_3: "Anna Anderson"
-team_profile_3: "Product Manager"
-portfolio_title: "Our Latest Projects"
-portfolio_image_1: "/img/portfolio/work-1.jpg"
-portfolio_image_2: "/img/portfolio/work-2.jpg"
-portfolio_image_3: "/img/portfolio/work-3.jpg"
-portfolio_image_4: "/img/portfolio/work-4.jpg"
-portfolio_image_5: "/img/portfolio/work-5.jpg"
-portfolio_image_6: "/img/portfolio/work-6.jpg"
-testimonial_content_1: "The quick, brown fox jumps over a lazy dog. DJs flock by when MTV ax quiz prog. Junk MTV quiz graced by fox whelps. Bawds jog, flick quartz, vex nymphs. Waltz, bad nymph"
-testimonial_image_1: "/img/person/person_1.jpg"
-testimonial_name_1: "Sam Watson"
-testimonial_profile_1: "CEO - Mosh Elite Ltd."
-testimonial_content_2: "The quick, brown fox jumps over a lazy dog. DJs flock by when MTV ax quiz prog. Junk MTV quiz graced by fox whelps. Bawds jog, flick quartz, vex nymphs. Waltz, bad nymph"
-testimonial_image_2: "/img/person/person_2.jpg"
-testimonial_name_2: "Edinson Alfa"
-testimonial_profile_2: "CEO - Mosh Elite Ltd."
-testimonial_content_3: "The quick, brown fox jumps over a lazy dog. DJs flock by when MTV ax quiz prog. Junk MTV quiz graced by fox whelps. Bawds jog, flick quartz, vex nymphs. Waltz, bad nymph"
-testimonial_image_3: "/img/person/person_3.jpg"
-testimonial_name_3: "May Halloway"
-testimonial_profile_3: "CEO - Mosh Elite Ltd."
-testimonial_content_4: "The quick, brown fox jumps over a lazy dog. DJs flock by when MTV ax quiz prog. Junk MTV quiz graced by fox whelps. Bawds jog, flick quartz, vex nymphs. Waltz, bad nymph"
-testimonial_image_4: "/img/person/person_1.jpg"
-testimonial_name_4: "Sam Watson"
-testimonial_profile_4: "CEO - Mosh Elite Ltd."
-testimonial_content_5: "The quick, brown fox jumps over a lazy dog. DJs flock by when MTV ax quiz prog. Junk MTV quiz graced by fox whelps. Bawds jog, flick quartz, vex nymphs. Waltz, bad nymph"
-testimonial_image_5: "/img/person/person_2.jpg"
-testimonial_name_5: "Edinson Alfa"
-testimonial_profile_5: "CEO - Mosh Elite Ltd."
-testimonial_content_6: "The quick, brown fox jumps over a lazy dog. DJs flock by when MTV ax quiz prog. Junk MTV quiz graced by fox whelps. Bawds jog, flick quartz, vex nymphs. Waltz, bad nymph"
-testimonial_image_6: "/img/person/person_3.jpg"
-testimonial_name_6: "May Halloway"
-testimonial_profile_6: "CEO - Mosh Elite Ltd."
-contact_title: "Just say hello or drop us a line. You can manualy send us email on"
-contact_email: "example@mail.com"
-client1_image: "/img/clients/airbnb.png"
-client2_image: "/img/clients/google.png"
-client3_image: "/img/clients/mailchimp.png"
-client4_image: "/img/clients/paypal.png"
-client5_image: "/img/clients/stripe.png"
+slider1_image_url: data:image/jpeg;base64,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
+slider1_title: We're design studio believe in ideas
+slider3_subtitle: Beautify handcrafted templates for your website
+service_name5: Graphics Design
+testimonial_name_4: Sam Watson
+testimonial_profile_6: CEO - Mosh Elite Ltd.
+service_image_url1: /img/icons/web_development.svg
+service_name6: Product Design
+service_name7: SEO & Marketing
+service_name8: SEO & Marketing
+team_name_2: Sarah Johanson
+portfolio_title: Our Latest Projects
 draft: false
-
+slider1_subtitle: Creative Design
+slider2_image_url: /img/bg_image_2.jpg
+slider2_title: We combine Design, Thinking, and Technical
+slider3_image_url: /img/bg_image_3.jpg
+slider3_title: Easy way to build perfect website
+about_image_url: /img/about.jpg
+about_title: We are Professional Teams to Growth your Business
+about_content: But I must explain to you how all this mistaken idea of
+  denouncing pleasure and praising pain was born and I will give you a complete
+  account of the system, and expound the actual teachings of the great explorer
+  of
+service_title: See what can we do for your Projects
+service_name1: Web Development
+service_image_url2: /img/icons/graphics_design.svg
+service_name2: Graphics Design
+service_image_url3: /img/icons/customer_services.svg
+service_name3: Data Analyst
+service_image_url4: /img/icons/data_analyst.svg
+service_name4: Digital Marketing
+service_image_url5: /img/icons/graphics_design.svg
+service_image_url6: /img/icons/graphics_design.svg
+service_image_url7: /img/icons/product_design.svg
+service_image_url8: /img/icons/seo_and_marketing.svg
+team_title: The Expert Team on ReveTive
+team_image_1: /img/teams/team_1.jpg
+team_name_1: Walter White
+team_profile_1: Chief Executive Officer
+team_image_2: /img/teams/team_2.jpg
+team_profile_2: Chief Technology Officer
+team_image_3: /img/teams/team_3.jpg
+team_name_3: Anna Anderson
+team_profile_3: Product Manager
+portfolio_image_1: /img/portfolio/work-1.jpg
+portfolio_image_2: /img/portfolio/work-2.jpg
+portfolio_image_3: /img/portfolio/work-3.jpg
+portfolio_image_4: /img/portfolio/work-4.jpg
+portfolio_image_5: /img/portfolio/work-5.jpg
+portfolio_image_6: /img/portfolio/work-6.jpg
+testimonial_content_1: The quick, brown fox jumps over a lazy dog. DJs flock by
+  when MTV ax quiz prog. Junk MTV quiz graced by fox whelps. Bawds jog, flick
+  quartz, vex nymphs. Waltz, bad nymph
+testimonial_image_1: /img/person/person_1.jpg
+testimonial_name_2: Edinson Alfa
+testimonial_name_3: May Halloway
+testimonial_image_5: /img/person/person_2.jpg
+testimonial_image_6: /img/person/person_3.jpg
+contact_title: Just say hello or drop us a line. You can manualy send us email on
+testimonial_profile_1: CEO - Mosh Elite Ltd.
+testimonial_profile_2: CEO - Mosh Elite Ltd.
+testimonial_name_1: Sam Watson
+testimonial_content_2: The quick, brown fox jumps over a lazy dog. DJs flock by
+  when MTV ax quiz prog. Junk MTV quiz graced by fox whelps. Bawds jog, flick
+  quartz, vex nymphs. Waltz, bad nymph
+testimonial_image_2: /img/person/person_2.jpg
+testimonial_content_3: The quick, brown fox jumps over a lazy dog. DJs flock by
+  when MTV ax quiz prog. Junk MTV quiz graced by fox whelps. Bawds jog, flick
+  quartz, vex nymphs. Waltz, bad nymph
+testimonial_image_3: /img/person/person_3.jpg
+testimonial_content_4: The quick, brown fox jumps over a lazy dog. DJs flock by
+  when MTV ax quiz prog. Junk MTV quiz graced by fox whelps. Bawds jog, flick
+  quartz, vex nymphs. Waltz, bad nymph
+testimonial_image_4: /img/person/person_1.jpg
+testimonial_content_5: The quick, brown fox jumps over a lazy dog. DJs flock by
+  when MTV ax quiz prog. Junk MTV quiz graced by fox whelps. Bawds jog, flick
+  quartz, vex nymphs. Waltz, bad nymph
+testimonial_name_5: Edinson Alfa
+testimonial_content_6: The quick, brown fox jumps over a lazy dog. DJs flock by
+  when MTV ax quiz prog. Junk MTV quiz graced by fox whelps. Bawds jog, flick
+  quartz, vex nymphs. Waltz, bad nymph
+testimonial_name_6: May Halloway
+contact_email: example@mail.com
+client1_image: /img/clients/airbnb.png
+client2_image: /img/clients/google.png
+client3_image: /img/clients/mailchimp.png
+client4_image: /img/clients/paypal.png
+client5_image: /img/clients/stripe.png
+testimonial_profile_3: CEO - Mosh Elite Ltd.
+testimonial_profile_4: CEO - Mosh Elite Ltd.
+testimonial_profile_5: CEO - Mosh Elite Ltd.
 ---
