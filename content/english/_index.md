@@ -1,5 +1,5 @@
 ---
-slider1_image_url: /img/bg_image_1.jpg
+slider1_image_url: /images/images.jpg
 slider1_title: We're design studio believe in ideas
 slider3_subtitle: Beautify handcrafted templates for your website
 service_name5: Graphics Design
