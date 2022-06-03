@@ -15,7 +15,7 @@ draft: false
 slider1_subtitle: Creative Design
 slider2_image_url: /images/banner.jpg
 slider2_title: We combine Design, Thinking, and Technical
-slider3_image_url: /img/bg_image_3.jpg
+slider3_image_url: https://images.pexels.com/photos/753626/pexels-photo-753626.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1
 slider3_title: Easy way to build perfect website
 about_image_url: /images/phone.jpg
 about_title: We are Professional Teams to Growth your Business
