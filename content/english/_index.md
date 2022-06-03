@@ -13,7 +13,7 @@ team_name_2: Sarah Johanson
 portfolio_title: Our Latest Projects
 draft: false
 slider1_subtitle: Creative Design
-slider2_image_url: /img/banner.jpg
+slider2_image_url: /images/banner.jpg
 slider2_title: We combine Design, Thinking, and Technical
 slider3_image_url: /img/bg_image_3.jpg
 slider3_title: Easy way to build perfect website
