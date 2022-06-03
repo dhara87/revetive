@@ -17,7 +17,7 @@ slider2_image_url: /img/bg_image_2.jpg
 slider2_title: We combine Design, Thinking, and Technical
 slider3_image_url: /img/bg_image_3.jpg
 slider3_title: Easy way to build perfect website
-about_image_url: /img/bike.jpg
+about_image_url: /static/images/bike.jpg
 about_title: We are Professional Teams to Growth your Business
 about_content: But I must explain to you how all this mistaken idea of
   denouncing pleasure and praising pain was born and I will give you a complete
