@@ -44,7 +44,7 @@ team_profile_2: Chief Technology Officer
 team_image_3: /img/teams/team_3.jpg
 team_name_3: Anna Anderson
 team_profile_3: Product Manager
-portfolio_image_1: /img/portfolio/work-1.jpg
+portfolio_image_1: /img/bg_image_3.jpg
 portfolio_image_2: /img/portfolio/work-2.jpg
 portfolio_image_3: /img/portfolio/work-3.jpg
 portfolio_image_4: /img/portfolio/work-4.jpg
