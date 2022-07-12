@@ -1,5 +1,5 @@
 ---
-title: test blog
+title: demo blog
 page_header_bg: https://www.w3schools.com/howto/img_nature_wide.jpg
 date: 2022-05-19T12:54:12.187Z
 slug: demo blog
