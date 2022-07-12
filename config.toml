@@ -86,11 +86,11 @@ link = "plugins/googleapis.js"
   URL = "/contact"
   weight = 6
 
-  [[Languages.en.menu.main]]
-  name = "Search"
-  URL = "/search"
-  weight = 7
-  
+  # [[Languages.en.menu.main]]
+  # name = "Search"
+  # URL = "/search"
+  # weight = 7
+
 #################### default parameters ################################
 [params]
 logo = "ReveTive"
